@@ -1,5 +1,7 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  ul 
+    each mess in messages
+      li #{mess.user} says #{mess.text} at #{mess.added}
+  a(href=`http://localhost:${process.env.PORT || 3000}/new`): button= "Send a new message"
