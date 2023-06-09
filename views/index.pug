@@ -4,4 +4,4 @@ block content
   ul 
     each mess in messages
       li #{mess.user} says #{mess.text} at #{mess.added}
-  a(href=`/new`): button= "Go to form"
+  a(href="/new"): button= "Send new message"
